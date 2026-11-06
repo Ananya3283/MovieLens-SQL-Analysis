@@ -1,4 +1,6 @@
 # MovieLens SQL Analysis
+
+**Live dashboard:** [ananya3283.github.io/MovieLens-SQL-Analysis](https://ananya3283.github.io/MovieLens-SQL-Analysis/), an interactive version of these queries. Filter by genre and release decade and choose the minimum number of ratings for "top rated"; every figure is computed from `movies.csv` and `ratings_sample.csv` (`web/scripts/build_data.py`).
 ## Overview
 I worked on this project to strengthen my SQL skills by analyzing the MovieLens dataset.
 The dataset contains information about movies and user ratings. Using SQL queries, I explored rating patterns, identified popular movies, and analyzed genre performance. The project helped me practice joins, aggregations, filtering, and sorting while extracting meaningful insights from relational data.
@@ -69,4 +71,5 @@ Analyzed genres based on average ratings and total rating counts.
 ## Conclusion
 This project helped me gain hands-on experience with SQL by working on a real-world movie ratings dataset. Through query writing and analysis, I learned how to extract insights from structured data and answer practical business questions.
 
-
+## Web version
+`web/` is a React + TypeScript + Vite app (Tailwind, Recharts, Motion), deployed to GitHub Pages by `.github/workflows/pages.yml`. Rebuild the data with `python web/scripts/build_data.py`, then `cd web && npm install && npm run dev`. "Top rated" defaults to movies with at least 20 ratings, so a movie with a handful of 5-star ratings doesn't top the list.
